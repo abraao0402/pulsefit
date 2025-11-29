@@ -1,227 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Academia PulseFit - Planos</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="logo">PulseFit</div>
-      <nav class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#planos">Planos</a>
-        <a href="#premium">Premium</a>
-        <a href="#comparativo">Comparativo</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-    </header>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <section style="max-width:420px;margin:4rem auto;padding:2rem;border-radius:12px;">
+    <h1>Login</h1>
+    <div>
+      <form id="loginForm" novalidate>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required autocomplete="username" style="width:100%;margin-top:0.4rem;padding:0.6rem;border-radius:8px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06)">
 
-    <main>
-      <section id="inicio" class="screen hero">
-        <div class="hero-content">
-          <p class="eyebrow">Bem-vindo à PulseFit</p>
-          <h1>Treine forte, pague justo</h1>
-          <p class="lede">
-            Escolha um plano que acompanha seu ritmo e receba acompanhamento
-            profissional em todas as etapas.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#planos">Ver planos</a>
-            <a class="btn ghost" href="#comparativo">Comparar</a>
-          </div>
-        </div>
-        <div class="hero-highlight">
-          <p>Maior rede de treinos funcionais da cidade</p>
-          <strong>+4.500 alunos ativos</strong>
-        </div>
-      </section>
+        <label for="password" style="display:block;margin-top:1rem;">Senha:</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password" style="width:100%;margin-top:0.4rem;padding:0.6rem;border-radius:8px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06)">
 
-      <section id="planos" class="screen pricing-grid">
-        <div class="section-heading">
-          <span>Tela 2</span>
-          <h2>Planos essenciais</h2>
-          <p>Defina seu objetivo e comece hoje mesmo</p>
+        <div style="margin-top:1.25rem;display:flex;gap:0.75rem;">
+          <button type="submit" class="btn primary" style="flex:1">Entrar</button>
+          <a href="pulsefit.html" class="btn ghost" style="align-self:center;padding:0.6rem 1rem;border-radius:8px">Cancelar</a>
         </div>
-        <div class="cards">
-          <article class="plan-card">
-            <p class="badge">Starter</p>
-            <h3>Fit Light</h3>
-            <p class="price"><span>R$</span>119<span>/mês</span></p>
-            <ul>
-              <li>Acesso ilimitado em horário comercial</li>
-              <li>2 aulas coletivas por semana</li>
-              <li>Avaliação física semestral</li>
-              <li>Treinos via aplicativo</li>
-            </ul>
-            <a class="btn secondary" href="#faq">Assinar Fit Light</a>
-          </article>
-          <article class="plan-card featured">
-            <p class="badge">Popular</p>
-            <h3>Power Prime</h3>
-            <p class="price"><span>R$</span>169<span>/mês</span></p>
-            <ul>
-              <li>Funcionamento 24h com reconhecimento facial</li>
-              <li>Todas as aulas coletivas e bike indoor</li>
-              <li>Avaliação física trimestral</li>
-              <li>1 consulta nutricional por ciclo</li>
-            </ul>
-            <a class="btn primary" href="#faq">Assinar Power Prime</a>
-          </article>
-          <article class="plan-card">
-            <p class="badge">Performance</p>
-            <h3>Elite Max</h3>
-            <p class="price"><span>R$</span>229<span>/mês</span></p>
-            <ul>
-              <li>Personal coletivo com grupos de até 5 alunos</li>
-              <li>Bioimpedância mensal e recovery lounge</li>
-              <li>Suplementação pré-treino cortesia</li>
-              <li>Locker individual com tomada</li>
-            </ul>
-            <a class="btn secondary" href="#faq">Assinar Elite Max</a>
-          </article>
-        </div>
-      </section>
+      </form>
+    </div>
+  </section>
 
-      <section id="premium" class="screen premium-grid">
-        <div class="section-heading">
-          <span>Tela 3</span>
-          <h2>Planos especiais</h2>
-          <p>Experiências exclusivas para necessidades específicas</p>
-        </div>
-        <div class="premium-cards">
-          <article class="premium-card">
-            <div>
-              <h3>Corporate Pulse</h3>
-              <p>Equipes mais saudáveis e motivadas</p>
-            </div>
-            <p class="price">R$ 5.990/mês</p>
-            <ul>
-              <li>Até 40 colaboradores com acesso ilimitado</li>
-              <li>Relatórios mensais de engajamento</li>
-              <li>Aulas in company quinzenais</li>
-            </ul>
-          </article>
-          <article class="premium-card">
-            <div>
-              <h3>Pulse Outdoor</h3>
-              <p>Treinos funcionais em parques parceiros</p>
-            </div>
-            <p class="price">R$ 259/mês</p>
-            <ul>
-              <li>3 sessões externas + 2 indoor por semana</li>
-              <li>Professor exclusivo para o grupo</li>
-              <li>Kit Pulse Outdoor incluso</li>
-            </ul>
-          </article>
-          <article class="premium-card">
-            <div>
-              <h3>Pulse Recovery</h3>
-              <p>Foco em reabilitação e bem-estar</p>
-            </div>
-            <p class="price">R$ 349/mês</p>
-            <ul>
-              <li>Fisioterapeuta parceiro em plantões</li>
-              <li>Pilates solo e alongamento assistido</li>
-              <li>Massagem desportiva mensal</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="comparativo" class="screen compare">
-        <div class="section-heading">
-          <span>Tela 4</span>
-          <h2>Comparativo rápido</h2>
-          <p>Veja o que muda entre os planos mais procurados</p>
-        </div>
-        <div class="compare-table">
-          <div class="compare-row compare-header">
-            <span>Recursos</span>
-            <span>Fit Light</span>
-            <span>Power Prime</span>
-            <span>Elite Max</span>
-          </div>
-          <div class="compare-row">
-            <span>Horário 24h</span>
-            <span>—</span>
-            <span>✔</span>
-            <span>✔</span>
-          </div>
-          <div class="compare-row">
-            <span>Aulas ilimitadas</span>
-            <span>—</span>
-            <span>✔</span>
-            <span>✔</span>
-          </div>
-          <div class="compare-row">
-            <span>Nutri e personal</span>
-            <span>—</span>
-            <span>Nutri</span>
-            <span>Nutri + Personal</span>
-          </div>
-          <div class="compare-row">
-            <span>Bioimpedância mensal</span>
-            <span>—</span>
-            <span>—</span>
-            <span>✔</span>
-          </div>
-          <div class="compare-row">
-            <span>Locker exclusivo</span>
-            <span>—</span>
-            <span>—</span>
-            <span>✔</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="screen faq">
-        <div class="section-heading">
-          <span>Tela 5</span>
-          <h2>Dúvidas frequentes</h2>
-          <p>Transparência total antes da sua matrícula</p>
-        </div>
-        <div class="faq-grid">
-          <article>
-            <h3>Posso trocar de plano a qualquer momento?</h3>
-            <p>
-              Sim, basta solicitar via aplicativo. Ajustamos a cobrança
-              proporcional no próximo ciclo.
-            </p>
-          </article>
-          <article>
-            <h3>Existe taxa de matrícula?</h3>
-            <p>
-              Não cobramos taxa para planos anuais. Para planos mensais, há uma
-              taxa única de R$ 59 para emissão do kit de acesso.
-            </p>
-          </article>
-          <article>
-            <h3>E se eu ficar afastado por motivo médico?</h3>
-            <p>
-              Apresente o laudo e pausamos o plano por até 60 dias sem custos.
-            </p>
-          </article>
-          <article>
-            <h3>Vocês oferecem aula experimental?</h3>
-            <p>
-              Claro! Agende pelo site e participe de uma sessão guiada sem
-              compromisso.
-            </p>
-          </article>
-        </div>
-        <div class="cta">
-          <p>Pronto para se mexer?</p>
-          <a class="btn primary" href="#planos">Garanta sua vaga</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>© 2025 PulseFit. Todos os direitos reservados.</p>
-      <p>Av. Moema 1100 · São Paulo · (11) 94000-2025</p>
-    </footer>
-  </body>
+  <script>
+    // Trata o submit no cliente: previne o comportamento padrão, valida simples e seta sessionStorage antes de redirecionar.
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('loginForm');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = form.username.value.trim();
+        const password = form.password.value;
+        if (!username || !password) {
+          alert('Preencha usuário e senha.');
+          return;
+        }
+        // Exemplo de validação local (apenas demonstração).
+        // Se quiser credenciais fixas, use: if (username !== 'admin' || password !== 'senha') { alert('Credenciais inválidas'); return; }
+        sessionStorage.setItem('authenticated', '1');
+        // small delay to ensure sessionStorage grava antes do redirect
+        setTimeout(() => window.location.href = 'pulsefit.html', 50);
+      });
+    });
+  </script>
+</body>
 </html>
-
