@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section style="max-width:420px;margin:4rem auto;padding:2rem;border-radius:12px;">
+    <h1>Login</h1>
+    <div>
+      <form id="loginForm" novalidate>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required autocomplete="username" style="width:100%;margin-top:0.4rem;padding:0.6rem;border-radius:8px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06)">
+
+        <label for="password" style="display:block;margin-top:1rem;">Senha:</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password" style="width:100%;margin-top:0.4rem;padding:0.6rem;border-radius:8px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06)">
+
+        <div style="margin-top:1.25rem;display:flex;gap:0.75rem;">
+          <button type="submit" class="btn primary" style="flex:1">Entrar</button>
+          <a href="index.html" class="btn ghost" style="align-self:center;padding:0.6rem 1rem;border-radius:8px">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Trata o submit no cliente: previne o comportamento padrão, valida simples e seta sessionStorage antes de redirecionar.
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('loginForm');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = form.username.value.trim();
+        const password = form.password.value;
+        if (!username || !password) {
+          alert('Preencha usuário e senha.');
+          return;
+        }
+        // Exemplo de validação local (apenas demonstração).
+        // Se quiser credenciais fixas, use: if (username !== 'admin' || password !== 'senha') { alert('Credenciais inválidas'); return; }
+        sessionStorage.setItem('authenticated', '1');
+        // small delay to ensure sessionStorage grava antes do redirect
+        setTimeout(() => window.location.href = 'index.html', 50);
+      });
+    });
+  </script>
+</body>
+</html>
